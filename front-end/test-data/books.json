@@ -1,0 +1,12 @@
+[
+  { "title": "The Silmarillion", "id": 1 },
+  { "title": "The Dirt", "id": 2 },
+  { "title": "JavaScript and JQuery", "id": 3 },
+  { "title": "Powershell and a Month of Lunches", "id": 4 },
+  { "title": "Ilium", "id": 5 },
+  { "title": "Lord of the Flies", "id": 6 },
+  { "title": "Grapes of Wrath", "id": 7 },
+  { "title": "Count of Monte Cristo", "id": 8 },
+  { "title": "The Idiot", "id": 9 },
+  { "title": "City of Thieves", "id": 10 }
+]

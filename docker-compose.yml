@@ -1,0 +1,34 @@
+version: "3.9"
+services:
+    front-end:
+        build: ./front-end
+        ports:
+            - "3000:3000"
+        networks:
+            - app-network    
+
+    database:
+        build: ./database
+        ports: 
+            - "5432:5432"
+        restart: always
+        volumes:
+            - $HOME/docker/volumes/library-composed:/var/lib/postgresql/data postgres            
+        networks:
+            - app-network  
+
+    back-end:
+        build: ./back-end
+        ports: 
+            - "3001:3001"
+        environment:
+            - DB_CONNECTION_STRING=postgresql://postgres:docker@database:5432/Books
+        depends_on:
+            - "database"
+        networks:
+            - app-network  
+        
+networks:
+    app-network:
+        driver: bridge    
+
